@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css"/>
+    <title>{$title}</title>
+</head>
+<body>
+<div class="container">
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle"  data-toggle="dropdown" href="{:U('Index/Index')}">
+                Root
+            </a>
+        </li>
+    </ul>
+
+    <ul class="list-group">
+
+        <volist name="list" id="vo">
+            <if condition="$vo['is_file']">
+                <a href="{:U('Index/view',['dir'=>base64_encode($vo['dir'])])}">
+
+                    <li class="list-group-item">
+                        <span class="glyphicon glyphicon-file"></span>
+                        {$vo.name}
+                    </li>
+                </a>
+
+                <else />
+
+
+            </if>
+
+        </volist>
+        <volist name="list" id="vo">
+            <if condition="$vo['is_file']">
+
+                <else />
+
+                <a href="{:U('Index/Index',['dir'=>base64_encode($vo['dir'])])}">
+                    <li class="list-group-item">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        {$vo.name}
+                    </li>
+                </a>
+
+            </if>
+
+        </volist>
+
+    </ul>
+</div>
+</body>
+</html>
