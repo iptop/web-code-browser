@@ -1,0 +1,56 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/web-code-browser/Public/css/bootstrap.min.css"/>
+
+
+
+
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shCore.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushBash.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushCpp.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushCSharp.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushDelphi.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushDiff.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushGroovy.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushRuby.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushSql.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushVb.js"></script>
+    <script type="text/javascript" src="/web-code-browser/Public/syntaxhighlighter_2.0.278/scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="/web-code-browser/Public/syntaxhighlighter_2.0.278/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="/web-code-browser/Public/syntaxhighlighter_2.0.278/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+        SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+        SyntaxHighlighter.all();
+    </script>
+
+
+    <title><?php echo ($title); ?></title>
+</head>
+<body>
+
+
+
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle"  data-toggle="dropdown" href="<?php echo U('Index/Index');?>">
+                Root
+            </a>
+        </li>
+    </ul>
+<pre class="brush: c-sharp;">
+<?php echo ($text); ?>
+</pre>
+</div>
+</body>
+</html>
